@@ -1,0 +1,18 @@
+float x;
+void setup() {
+  // put your setup code here, to run once:
+pinMode(A0,INPUT);
+Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+float v;
+delay(750);
+v=analogRead(A0);
+Serial.println("     MONITOR");
+x=v/20.05882353;
+Serial.println(v);
+Serial.println("Esto representa una temperatura de: ");
+Serial.println(x);
+}
